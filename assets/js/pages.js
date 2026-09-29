@@ -29,12 +29,3 @@ if (tocLinks.length && 'IntersectionObserver' in window) {
   $$('.legal-section[id]').forEach(s => io.observe(s));
 }
 
-// Footer easter egg, same as the home page
-const sleep = $('#sleep'), sleepText = $('#sleep-text');
-if (sleep && sleepText) {
-  let wake = 0;
-  sleep.addEventListener('click', () => {
-    wake++;
-    sleepText.textContent = wake % 2 ? 'מי העיר אותי? טוב, עוד סיבוב אחד.' : 'אם אני לא בלייב, כנראה שאני טוען אנרגיה לגל הבא.';
-  });
-}
